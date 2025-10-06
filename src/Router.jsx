@@ -3,12 +3,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import Layout from "./components/Layout";
+import App from "./App";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <App />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/about', element: <About /> },

@@ -1,12 +1,10 @@
-import Navbar from './components/Navbar'
-// import Footer from './components/Footer'
-
 import './App.css'
+import Layout from './components/Layout'
 
 function App() {
   return (
     <>
-      <Navbar />
+    <Layout />
     </>
   )
 }
