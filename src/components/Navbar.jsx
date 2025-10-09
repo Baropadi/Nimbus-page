@@ -21,7 +21,7 @@ const pages = [
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
- 
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -32,14 +32,16 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="navBar">
         <Toolbar disableGutters>
           <Link to="/">
             <Box
+              className="logo"
               component="img"
               src={logo}
               alt="Logo de Nimbus Technology"
               sx={{
+                padding: 1,
                 height: 40,
                 width: "auto",
                 cursor: "pointer",
@@ -90,6 +92,7 @@ function Navbar() {
           </Box>
           <Link to="/">
             <Box
+              className="logo"
               component="img"
               src={logo}
               alt="Logo de Nimbus Technology"
