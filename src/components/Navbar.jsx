@@ -31,8 +31,11 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" className="navBar">
+    <AppBar position='fixed' 
+    sx={{ 
+      backgroundColor: 'rgba(25, 41, 34, 0.83)',
+      }}>
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to="/">
             <Box

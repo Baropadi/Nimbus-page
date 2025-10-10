@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import {
   Container,
@@ -7,11 +7,24 @@ import {
   Typography,
   TextField,
   Button,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   const form = useRef();
+
+  const [open, setOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,14 +38,19 @@ export default function Footer() {
       )
       .then(
         () => {
-          alert("Mensaje enviado correctamente");
+          setSnackbarMessage("¡Gracias por contactarte con nosotros! Te responderemos pronto.");
+          setSnackbarSeverity("success");
           form.current.reset();
         },
         (error) => {
+          setSnackbarMessage(
+            "Hubo un error al enviar el correo. Intente nuevamente"
+          );
+          setSnackbarSeverity("error");
           console.log("Error al enviar el correo", error);
-          alert("Hubo un error al enviar el correo. Intente nuevamente");
         }
       );
+    setOpen(true);
   };
 
   return (
@@ -53,6 +71,7 @@ export default function Footer() {
               Equipos y servicios tecnológicos para empresas y particulares.
               Instalación, mantenimiento y soporte técnico.
             </Typography>
+
             <Box
               sx={{
                 borderTop: "1px solid rgba(255, 255, 255, 0.3)",
@@ -170,6 +189,7 @@ export default function Footer() {
                   },
                 }}
               ></TextField>
+
               <Button
                 type="submit"
                 variant="contained"
@@ -185,9 +205,25 @@ export default function Footer() {
               >
                 Enviar
               </Button>
+
+              <Snackbar
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                open={open}
+                autoHideDuration={6000}
+                onClose={handleClose}
+              >
+                <Alert
+                  onClose={handleClose}
+                  severity={snackbarSeverity}
+                  sx={{ width: "100%" }}
+                >
+                  {snackbarMessage}
+                </Alert>
+              </Snackbar>
             </Box>
           </Grid>
         </Grid>
+
         <Box
           sx={{
             borderTop: "1px solid rgba(255, 255, 255, 0.3)",

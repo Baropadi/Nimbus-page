@@ -1,12 +1,14 @@
-import './App.css'
-import Layout from './components/Layout'
+import "./App.css";
+import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
-    <Layout />
+      <Layout />
+      <ScrollToTop />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
