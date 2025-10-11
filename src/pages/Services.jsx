@@ -4,28 +4,50 @@ import React from "react";
 const Services = () => {
   return (
     <Box
-      className="services"
       sx={{
         height: "100vh",
         backgroundImage: "url('/src/assets/FondoServices1.png')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
+        backgroundPosition: "center",
         display: "flex",
+        flexDirection: "column",
+        flexWrap: "wrap",
         alignItems: "center",
+        justifyContent: "center",
         color: "white",
       }}
     >
-      <Typography variant="h2" sx={{ width: "100%", fontWeight: "bold", m: 2 }}>
-        Nuestros servicios
-      </Typography>
-      <Typography
-        variant="h6"
-        sx={{ textAlign: "center", width: "100%", m: 3 }}
+      <Box
+        sx={{
+          backgroundColor: "rgba(26, 46, 46, 0.4)",
+          borderRadius: "0.5rem",
+          p: "15px",
+          m: '3em 0.5em 0em 0.5em',
+        }}
       >
-        Ofrecemos una amplia gama de servicios profesionales focalizados en proyectos de virtualización con tecnologías VMware, además de consultoría IT y soporte técnico.
-      </Typography>
+        <Typography
+          variant="h2"
+          sx={{ width: "100%", fontWeight: "bold", textAlign: "left" }}
+        >
+          Nuestros servicios
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: "rgba(26, 46, 46, 0.4)",
+          borderRadius: "0.5rem",
+          p: "10px",
+          m: "2em",
+        }}
+      >
+        <Typography variant="h6" sx={{ textAlign: "center", width: "100%" }}>
+          Ofrecemos una amplia gama de servicios profesionales focalizados en
+          proyectos de virtualización con tecnologías VMware, además de
+          consultoría IT y soporte técnico.
+        </Typography>
+      </Box>
     </Box>
   );
 };

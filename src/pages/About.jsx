@@ -12,14 +12,27 @@ const About = () => {
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
         display: "flex",
+        flexDirection: "column",
+        flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center",
         color: "white",
       }}
     >
-      <Typography variant="h2" sx={{ width: "100%", fontWeight: "bold", m: 2 }}>
-        Sobre nosotros
-      </Typography>
+      <Box
+        sx={{
+          backgroundColor: "rgba(26, 46, 46, 0.4)",
+          borderRadius: "0.5rem",
+          p: "10px",
+          m: "10px",
+        }}>
+        <Typography
+          variant="h2"
+          sx={{ width: "100%", fontWeight: "bold", m: 2 }}
+        >
+          Sobre nosotros
+        </Typography>
+      </Box>
     </Box>
   );
 };

@@ -3,28 +3,48 @@ import { Box, Typography } from "@mui/material";
 function Home() {
   return (
     <Box
-      className="home"
       sx={{
         height: "100vh",
         backgroundImage: "url('/src/assets/FondoHome1.png')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
+        backgroundPosition: "center",
         display: "flex",
+        flexDirection: "column",
+        flexWrap: "wrap",
         alignItems: "center",
+        justifyContent: "center",
         color: "white",
       }}
     >
-      <Typography variant="h2" sx={{ width: "100%", fontWeight: "bold", m: 2 }}>
-        Bienvenido a Nimbus Technology
-      </Typography>
-      <Typography
-        variant="h6"
-        sx={{ textAlign: "center", width: "100%", m: 3 }}
+      <Box
+        sx={{
+          backgroundColor: "rgba(26, 46, 46, 0.4)",
+          borderRadius: "0.5rem",
+          p: "15px",
+          m: '3em 0.5em 0em 0.5em',
+        }}
       >
-        Ofrecemos soluciones tecnológicas para empresas y particulares.
-      </Typography>
+        <Typography
+          variant="h2"
+          sx={{ width: "100%", fontWeight: "bold", textAlign: "left" }}
+        >
+          Bienvenido a Nimbus Technology
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          backgroundColor: "rgba(26, 46, 46, 0.4)",
+          borderRadius: "0.5rem",
+          p: "10px",
+          m: "2em",
+        }}
+      >
+        <Typography variant="h6" sx={{ textAlign: "center", width: "100%" }}>
+          Ofrecemos soluciones tecnológicas para empresas y particulares.
+        </Typography>
+      </Box>
     </Box>
   );
 }

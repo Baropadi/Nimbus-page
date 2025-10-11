@@ -45,6 +45,7 @@ function Navbar() {
               alt="Logo de Nimbus Technology"
               sx={{
                 padding: 1,
+                mr: 2,
                 height: 40,
                 width: "auto",
                 cursor: "pointer",
