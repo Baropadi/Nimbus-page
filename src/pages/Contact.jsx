@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const Contact = () => {
+function Contact() {
   return (
     <Box
       sx={{
@@ -14,28 +14,35 @@ const Contact = () => {
         display: "flex",
         flexDirection: "column",
         flexWrap: "wrap",
-        alignItems: "center",
         justifyContent: "center",
         color: "white",
       }}
     >
-      <Box
-        sx={{
-          backgroundColor: "rgba(26, 46, 46, 0.4)",
-          borderRadius: "0.5rem",
-          p: "10px",
-          m: "10px",
-        }}
-      >
+      <Box className="box-gradient" />
+      <Box className="box-title">
+        <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+          Contacto
+        </Typography>
+      </Box>
+      <Box className="box-text">
         <Typography
-          variant="h2"
-          sx={{ width: "100%", fontWeight: "bold", m: 2 }}
+          variant="h4"
+          sx={{ fontWeight: "bold" }}
         >
-          Contáctanos
+          Puedes contactarnos a través de los siguientes medios:
+        </Typography>
+        <br />
+        <Typography variant="h5" sx={{ ml: 8 }}>
+          Tel: +56 2 2276 6181
+          <br />
+          Correo: info@nimbustech.cl
+          <br />
+          Ubicación: Barros Borgoño 110, Oficina 809, Providencia, Santiago,
+          Chile.
         </Typography>
       </Box>
     </Box>
   );
-};
+}
 
 export default Contact;

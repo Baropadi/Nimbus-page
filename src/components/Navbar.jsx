@@ -21,6 +21,7 @@ const pages = [
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [isScrolled, setIsScrolled] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,11 +31,30 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 60) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <AppBar position='fixed' 
-    sx={{ 
-      backgroundColor: 'rgba(25, 41, 34, 0.83)',
-      }}>
+    <AppBar
+      position="fixed"
+      elevation={isScrolled ? 4 : 0}
+      sx={{
+        backgroundColor: isScrolled
+          ? "rgba(25, 41, 34, 0.88)"
+          : "rgba(25, 41, 34, 0.1)",
+        transition: "background-color 0.4s ease, box-shadow 0.3s ease",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link to="/">

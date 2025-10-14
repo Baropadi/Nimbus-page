@@ -38,7 +38,9 @@ export default function Footer() {
       )
       .then(
         () => {
-          setSnackbarMessage("¡Gracias por contactarte con nosotros! Te responderemos pronto.");
+          setSnackbarMessage(
+            "¡Gracias por contactarte con nosotros! Te responderemos pronto."
+          );
           setSnackbarSeverity("success");
           form.current.reset();
         },
@@ -91,9 +93,15 @@ export default function Footer() {
                 border: 0,
                 borderRadius: "8px",
                 marginTop: "1rem",
+                marginBottom: "0.5rem",
               }}
               allowFullScreen
             ></Box>
+            <Box>
+              <Typography>
+                Barros Borgoño 110, Oficina 809, Providencia, Santiago, Chile.
+              </Typography>
+            </Box>
           </Grid>
 
           <Grid>
@@ -159,7 +167,7 @@ export default function Footer() {
                 name="user_email"
                 label="Tu correo"
                 variant="filled"
-                size="small"
+                size="medium"
                 color="inherit"
                 required
                 slotProps={{
@@ -175,7 +183,7 @@ export default function Footer() {
                 name="message"
                 label="Tu mensaje"
                 variant="filled"
-                size="small"
+                size="medium"
                 color="inherit"
                 multiline
                 rows={4}
