@@ -66,7 +66,14 @@ export default function Footer() {
       >
         <Grid container spacing={5}>
           <Grid>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                fontWeight: "bold",
+                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)",
+              }}
+            >
               Nimbus Technology Ltda.
             </Typography>
             <Typography variant="body2">
@@ -82,7 +89,14 @@ export default function Footer() {
                 mb: 3,
               }}
             ></Box>
-            <Typography>Nuestra oficina:</Typography>
+            <Typography
+              sx={{
+                fontWeight: "bold",
+                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)",
+              }}
+            >
+              Nuestra oficina:
+            </Typography>
             <Box
               component="iframe"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4708.963249739537!2d-70.61950552794401!3d-33.43002625599174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf6329c10f99%3A0x800eaa0e2909c972!2sDr.%20Manuel%20Barros%20Borgo%C3%B1o%20110%2C%207500589%20Providencia%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1759788346547!5m2!1ses-419!2scl"
@@ -105,7 +119,14 @@ export default function Footer() {
           </Grid>
 
           <Grid>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                fontWeight: "bold",
+                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)",
+              }}
+            >
               Enlaces
             </Typography>
             <Typography
@@ -150,10 +171,18 @@ export default function Footer() {
           </Grid>
 
           <Grid>
-            <Typography variant="h6" gutterBottom>
-              Envíanos tu consulta
+            <Typography
+              variant="h6"
+              gutterBottom
+              sx={{
+                fontWeight: "bold",
+                textShadow: "1px 1px 3px rgba(0, 0, 0, 0.5)",
+              }}
+            >
+              Envíanos tu consulta:
             </Typography>
             <Box
+              id="contact-form"
               component="form"
               ref={form}
               onSubmit={sendEmail}
