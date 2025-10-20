@@ -26,7 +26,7 @@ function Home() {
       </Box>
       <Box className="box-text">
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             textAlign: "left",
           }}

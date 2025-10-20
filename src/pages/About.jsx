@@ -58,7 +58,7 @@ function About() {
 
       <Box className="box-text">
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             textAlign: "left",
             color: "white",
@@ -71,7 +71,7 @@ function About() {
 
       <Box className="box-text">
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{
             textAlign: "left",
             color: "white",
