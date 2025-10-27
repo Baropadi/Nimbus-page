@@ -79,6 +79,32 @@ export default function Footer() {
             <Typography variant="body2">
               Equipos y servicios tecnológicos para empresas y particulares.
               Instalación, mantenimiento y soporte técnico.
+              <br />
+              Ayudamos a nuestros clientes a abrir casos con el soporte técnico
+              de Dell Technologies en caso de ser requerido, ofrecemos apoyo en
+              la actualización de firmware de los distintos equipos bajo
+              garantía, y además a configurar upgrade de todo equipamiento como
+              Partner de{" "}
+              <Typography
+                className="contact-link"
+                variant="body2"
+                component="a"
+                href="https://www.nouschile.cl/tecnologia-de-punta/datacenter-infraestructura/equipos-dell/?gad_source=1&gad_campaignid=22611294446&gclid=CjwKCAjwgeLHBhBuEiwAL5gNETyyNCANnoq5KteRrEJhY9LTUqAF3EGOwl6ClUJiKxl7PYwySbN25BoCdRYQAvD_BwE"
+                sx={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  display: "inline-block",
+                  transition: "transform 0.2s ease, color 0.2s ease",
+                  "&:hover": {
+                    transform: "scale(1.01)",
+                    color: "gold",
+                  },
+                }}
+              >
+                Dell Technologies.
+              </Typography>
             </Typography>
 
             <Box
@@ -118,7 +144,7 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          <Grid>
+          <Grid size={{ xs: 8, sm: 4, md: 4 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -170,7 +196,7 @@ export default function Footer() {
             </Typography>
           </Grid>
 
-          <Grid>
+          <Grid size={{ xs: 12, sm: 8 }}>
             <Typography
               variant="h6"
               gutterBottom
@@ -190,9 +216,11 @@ export default function Footer() {
                 display: "flex",
                 flexDirection: "column",
                 gap: 2,
+                width: "100%",
               }}
             >
               <TextField
+                fullWidth
                 name="user_email"
                 label="Tu correo"
                 variant="filled"
@@ -209,6 +237,7 @@ export default function Footer() {
                 }}
               ></TextField>
               <TextField
+                fullWidth
                 name="message"
                 label="Tu mensaje"
                 variant="filled"

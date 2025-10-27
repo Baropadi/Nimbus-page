@@ -51,7 +51,7 @@ function Contact() {
         <br />
         <Typography
           variant="h5"
-          sx={{ ml: 8, textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)" }}
+          sx={{ ml: 8, mt: 2, mb: 2, textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)" }}
         >
           Tel: +56 2 2276 6181
           <br />
