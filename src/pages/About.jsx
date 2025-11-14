@@ -86,8 +86,8 @@ function About() {
           variant="h5"
           sx={{
             textAlign: { xs: "center", md: "left" },
-            fontSize: { xs: "1.1rem", sm: "1.3rem" },
-            color: "white",
+            fontSize: { xs: "1.1rem", sm: "1.5rem" },
+            mb: 2,
           }}
         >
           Somos una empresa de servicios profesionales focalizada en proyectos
@@ -174,8 +174,9 @@ function About() {
           variant="h5"
           sx={{
             textAlign: { xs: "center", md: "left" },
-            fontSize: { xs: "1.1rem", sm: "1.3rem" },
+            fontSize: { xs: "1.1rem", sm: "1.4rem" },
             color: "white",
+            mt: 3,
           }}
         >
           Nuestros profesionales cuentan con una vasta experiencia obtenida en

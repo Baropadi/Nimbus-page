@@ -66,9 +66,8 @@ function Contact() {
         </Typography>
 
         <Typography
-          // variant="h5"
+          variant="h5"
           sx={{
-            // ml: 8,
             mt: 3,
             mb: 2,
             fontSize: { xs: "1rem", sm: "1.2rem", md: "1.4rem" },
@@ -78,7 +77,7 @@ function Contact() {
         >
           Tel: +56 2 2276 6181
           <br />
-          Correo: info@nimbustech.cl
+          Correo: administracion@nimbustech.cl
           <br />
           Ubicación: Barros Borgoño 110, Oficina 809, Providencia, Santiago,
           Chile.

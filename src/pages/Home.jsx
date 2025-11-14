@@ -6,7 +6,7 @@ function Home() {
     <Box
       sx={{
         position: "relative",
-        height: { xs: "auto", md: "100vh" },
+        // height: { xs: "auto", md: "100vh" },
         minHeight: "100vh",
         backgroundImage: "url('/src/assets/FondoHome1.png')",
         backgroundSize: "cover",
@@ -17,7 +17,8 @@ function Home() {
         flexDirection: "column",
         justifyContent: "center",
         color: "white",
-        padding: { xs: "2rem 1rem", md: 0 },
+        px: { xs: 2, sm: 4, md: 10 },
+        // padding: { xs: "2rem 1rem", md: 0 },
         textAlign: { xs: "center", md: "left" },
       }}
     >

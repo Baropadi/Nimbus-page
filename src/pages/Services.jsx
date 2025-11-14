@@ -47,6 +47,7 @@ function Services() {
           variant="h5"
           sx={{
             textAlign: { xs: "center", md: "left" },
+            fontSize: { xs: "1.1rem", sm: "1.5rem" },
             mb: 3,
           }}
         >
