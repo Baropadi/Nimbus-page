@@ -20,38 +20,61 @@ function Contact() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: { xs: "scroll", md: "fixed" },
         display: "flex",
         flexDirection: "column",
-        flexWrap: "wrap",
         justifyContent: "center",
+        px: { xs: 2, sm: 4, md: 10 },
         color: "white",
       }}
     >
       <Box className="box-gradient" />
+
       <Box
         className="box-title"
         sx={{
-          mt: 15,
+          mt: { xs: 12, md: 15 },
+          textAlign: { xs: "center", md: "left" },
         }}
       >
-        <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: "1.9rem", sm: "2.2rem", md: "3rem" },
+          }}
+        >
           Contacto
         </Typography>
       </Box>
+
       <Box
         className="box-text"
         sx={{
-          mb: 12,
+          mb: { xs: 8, md: 12 },
         }}
       >
-        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: "1.3rem", sm: "1.7rem", md: "2rem" },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
           Contáctanos a través de los siguientes medios:
         </Typography>
-        <br />
+
         <Typography
-          variant="h5"
-          sx={{ ml: 8, mt: 2, mb: 2, textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)" }}
+          // variant="h5"
+          sx={{
+            // ml: 8,
+            mt: 3,
+            mb: 2,
+            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.4rem" },
+            textAlign: { xs: "center", md: "left" },
+            textShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",
+          }}
         >
           Tel: +56 2 2276 6181
           <br />
@@ -60,11 +83,14 @@ function Contact() {
           Ubicación: Barros Borgoño 110, Oficina 809, Providencia, Santiago,
           Chile.
         </Typography>
-        <br />
+
         <Typography
           variant="h5"
           sx={{
+            mt: 4,
             fontWeight: "bold",
+            textAlign: { xs: "center", md: "left" },
+            fontSize: { xs: "1rem", sm: "1.2rem", md: "1.4rem" },
             textShadow: "1px 4px 4px rgba(0, 0, 0, 0.6)",
           }}
         >
@@ -78,7 +104,7 @@ function Contact() {
             onClick={handleScrollToForm}
             sx={{
               textDecoration: "none",
-              color: 'lightgoldenrodyellow',
+              color: "lightgoldenrodyellow",
               fontWeight: "bold",
               cursor: "pointer",
               display: "inline-block",

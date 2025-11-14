@@ -50,31 +50,43 @@ function About() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: { xs: "scroll", md: "fixed" },
         display: "flex",
         flexDirection: "column",
-        flexWrap: "wrap",
         justifyContent: "center",
+        px: { xs: 2, sm: 4, md: 10 },
         color: "white",
       }}
     >
       <Box className="box-gradient" />
+
+      {/* Título de la sección */}
       <Box
         className="box-title"
         sx={{
-          mt: 15,
+          mt: { xs: 12, md: 15 },
+          textAlign: { xs: "center", md: "left" },
         }}
       >
-        <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: "1.8rem", sm: "2.2rem", md: "3rem" },
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
           Sobre nosotros
         </Typography>
       </Box>
 
+      {/* Texto Principal */}
       <Box className="box-text">
         <Typography
           variant="h5"
           sx={{
-            textAlign: "left",
+            textAlign: { xs: "center", md: "left" },
+            fontSize: { xs: "1.1rem", sm: "1.3rem" },
             color: "white",
           }}
         >
@@ -83,43 +95,74 @@ function About() {
         </Typography>
       </Box>
 
+      {/* Información Descriptiva */}
       <Paper
-        className="info-about"
         sx={{
           zIndex: 2,
-          p: 4,
-          pl: 5,
-          mt: 10,
-          mr: 10,
-          mb: 4,
-          ml: 0,
-          borderRadius: 0,
-          borderTopRightRadius: 55,
-          borderBottomRightRadius: 55,
-          backgroundColor: "rgba(242, 238, 223, 0.9)",
-          color: "GrayText",
+          p: { xs: 2.5, sm: 4, md: 5 },
+          mt: { xs: 8, md: 10 },
+          mx: { xs: 0, sm: 2, md: 6 },
+          borderRadius: { xs: 3, md: 5 },
+          borderBottomLeftRadius: { md: 150 },
+          backgroundColor: "rgba(19, 50, 47, 0.45)",
+          color: "whitesmoke",
         }}
       >
-        <Typography variant="subtitle1" sx={{ mb: 1.5 }}>
+        <Typography
+          variant="subtitle1"
+          sx={{
+            mb: 1.5,
+            textAlign: { xs: "center", md: "right" },
+          }}
+        >
           Realizamos respaldos de máquinas virtuales (y físicas), utilizando el
           software <strong>Veeam Backup Replicator</strong>, muy popular en
           ambientes virtualizados.
         </Typography>
-        <Typography variant="subtitle1">
+
+        <Typography
+          variant="subtitle1"
+          sx={{
+            textAlign: { xs: "center", md: "right" },
+          }}
+        >
           Trabajamos principalmente con hardware{" "}
           <strong>Dell Technologies</strong>, Servidores
-          <strong> PowerEdge</strong>, con uno o más procesadores (CPUs), discos
-          internos, SAS, NL_SAS, SSD, NVMe, etc. Laptops, estaciones de trabajo,
-          servidores, switches ethernet, switches FC, sistemas de almacenamiento
+          <strong> PowerEdge</strong>, con uno o más procesadores, discos SAS,
+          NL_SAS, SSD, NVMe y más. Laptops, estaciones de trabajo, servidores,
+          switches ethernet, switches FC y sistemas de almacenamiento
           inteligentes. <br />
         </Typography>
-        <Typography variant="subtitle1" sx={{ mt: 1.5 }}>
+
+        <Typography
+          variant="subtitle1"
+          sx={{
+            mt: 1.5,
+            textAlign: { xs: "center", md: "right" },
+          }}
+        >
           <strong>Sistemas de almacenamiento inteligentes:</strong> Series Dell
-          EMC, PowerVault MD, Compellent SC, VNX, VNXe, Unity, PowerStore y sus
-          diferentes modelos, en todas sus variedades de discos. Migraciones de
-          datos entre los mismos sistemas de almacenamiento compatibles.
+          EMC, PowerVault MD, Compellent SC, VNX, Unity, PowerStore en todas sus
+          variedades de discos. Migraciones de datos entre los mismos sistemas
+          de almacenamiento compatibles.
         </Typography>
-        <Typography variant="subtitle1" sx={{ mt: 1.5, fontWeight: "bold" }}>
+      </Paper>
+
+      <Paper
+        sx={{
+          zIndex: 2,
+          p: { xs: 2, sm: 3, md: 4 },
+          // pl: { xs: 2, sm: 4, md: 6 },
+          mt: 6,
+          mx: { xs: 2, sm: 4, md: 15 },
+          borderRadius: { xs: 3, md: 5 },
+          backgroundColor: "rgba(0, 20, 18, 0.56)",
+          color: "whitesmoke",
+          boxShadow: "6px 8px 10px rgba(0, 0, 0, 0.64)",
+          textAlign: { xs: "center", md: "left" },
+        }}
+      >
+        <Typography variant="h6">
           Cuéntenos lo que necesita y podemos configurar su laptop, servidor
           PowerEdge, estación de trabajo o sistema de almacenamiento inteligente
           ad-hoc a las necesidades de su empresa.
@@ -130,7 +173,8 @@ function About() {
         <Typography
           variant="h5"
           sx={{
-            textAlign: "left",
+            textAlign: { xs: "center", md: "left" },
+            fontSize: { xs: "1.1rem", sm: "1.3rem" },
             color: "white",
           }}
         >
@@ -140,15 +184,21 @@ function About() {
         </Typography>
       </Box>
 
+      {/* Equipo */}
       <Box sx={{ mt: 10, mb: 8, zIndex: 2 }}>
         <Typography
           variant="h3"
-          sx={{ fontWeight: "bold", mb: 6, textAlign: "center" }}
+          sx={{
+            fontWeight: "bold",
+            mb: 6,
+            textAlign: "center",
+            fontSize: { xs: "2rem", md: "2.7rem" },
+          }}
         >
           Nuestro Equipo
         </Typography>
 
-        <Grid container spacing={2} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center">
           {teamMembers.map((member, index) => (
             <Grid
               key={index}
@@ -163,9 +213,9 @@ function About() {
                   borderTopLeftRadius: 80,
                   boxShadow: "0px 4px 12px rgba(0,0,0,0.3)",
                   cursor: "pointer",
+                  ml: "auto",
+                  mr: "auto",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  ml: { xs: 8, sm: 5, md: 4 },
-                  mr: { xs: 8, sm: 5, md: 4 },
                   "&:hover": {
                     transform: "translateY(-8px)",
                     boxShadow: "0px 6px 20px rgba(0,0,0,0.5)",
@@ -183,6 +233,7 @@ function About() {
                     borderTopRightRadius: 12,
                   }}
                 />
+
                 <CardContent>
                   <Typography
                     variant="h6"
@@ -192,6 +243,7 @@ function About() {
                   >
                     {member.name}
                   </Typography>
+
                   <Typography
                     variant="body2"
                     sx={{

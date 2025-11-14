@@ -5,30 +5,53 @@ function Home() {
   return (
     <Box
       sx={{
-        height: "100vh",
+        position: "relative",
+        height: { xs: "auto", md: "100vh" },
+        minHeight: "100vh",
         backgroundImage: "url('/src/assets/FondoHome1.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: { xs: "scroll", md: "fixed" },
         display: "flex",
         flexDirection: "column",
-        flexWrap: "wrap",
         justifyContent: "center",
         color: "white",
+        padding: { xs: "2rem 1rem", md: 0 },
+        textAlign: { xs: "center", md: "left" },
       }}
     >
       <Box className="box-gradient" />
-      <Box className="box-title">
-        <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+
+      <Box
+        className="box-title"
+        sx={{
+          pl: { xs: 0, md: 5 },
+        }}
+      >
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: "1.8rem", sm: "2.2rem", md: "3rem" },
+          }}
+        >
           Bienvenido a Nimbus Technology
         </Typography>
       </Box>
-      <Box className="box-text">
+
+      <Box
+        className="box-text"
+        sx={{
+          pl: { xs: 0, md: 3.5 },
+        }}
+      >
         <Typography
           variant="h5"
           sx={{
-            textAlign: "left",
+            mt: 2,
+            textAlign: { xs: "center", md: "left" },
+            fontSize: { xs: "1.1rem", sm: "1.3rem", md: "1.6rem" },
           }}
         >
           Ofrecemos soluciones tecnológicas para empresas y particulares.

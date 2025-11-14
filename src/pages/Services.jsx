@@ -11,79 +11,109 @@ function Services() {
         backgroundImage: "url('/src/assets/FondoServices1.png')",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: { xs: "scroll", md: "fixed" },
         backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
-        flexWrap: "wrap",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         color: "white",
+        px: { xs: 2, sm: 4, md: 6 },
+        pt: { xs: 10, md: 15 },
       }}
     >
       <Box className="box-gradient" />
+
       <Box
         className="box-title"
         sx={{
-          mt: 15,
+          pl: { xs: 0, md: 3 },
         }}
       >
-        <Typography variant="h2" sx={{ fontWeight: "bold" }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: "1.8rem", sm: "2.3rem", md: "3rem" },
+            textAlign: { xs: "center", md: "left" },
+            mb: { xs: 2, md: 3 },
+          }}
+        >
           Nuestros servicios
         </Typography>
       </Box>
+
       <Box className="box-text">
-        <Typography variant="h5" sx={{ textAlign: "left", mb: 3 }}>
+        <Typography
+          variant="h5"
+          sx={{
+            textAlign: { xs: "center", md: "left" },
+            mb: 3,
+          }}
+        >
           Ofrecemos una amplia gama de servicios profesionales focalizados en
           proyectos de virtualización con tecnologías VMware, además de
           consultoría IT y soporte técnico.
         </Typography>
       </Box>
+
       <Paper
         sx={{
           zIndex: 2,
-          p: 4,
-          mt: 8,
-          mr: 0,
-          mb:6,
-          ml: 10,
-          borderRadius: 0,
-          borderTopLeftRadius: 15,
-          borderBottomLeftRadius: 150,
+          p: { xs: 2, sm: 3, md: 4 },
+          mt: { xs: 4, md: 8 },
+          mx: { xs: 0, md: 10 },
+          borderRadius: { xs: 3, md: 5 },
+          borderBottomLeftRadius: { md: 150 },
           backgroundColor: "rgba(19, 50, 47, 0.45)",
           color: "whitesmoke",
         }}
       >
-        <Typography variant="h6" sx={{ textAlign: "right" }}>
+        <Typography
+          variant="h6"
+          sx={{
+            textAlign: { xs: "center", md: "right" },
+            fontSize: { xs: "0.95rem", sm: "1rem", md: "1.2rem" },
+          }}
+        >
           Nuestro portafolio de servicios va desde la definición de arquitectura
           tecnológica, la implementación de la misma, puesta en producción,
           capacitación de los recursos técnicos, hasta el soporte técnico
-          requerido. <br /> <br />
+          requerido.
+          <br />
+          <br />
           <strong>
             Todo siempre basado en las mejores prácticas de la industria.
           </strong>
         </Typography>
       </Paper>
+
       <Box sx={{ zIndex: 2 }}>
         <Typography
           variant="h3"
-          sx={{ fontWeight: "bold", textAlign: "center", mb: 3, mt: 3 }}
+          sx={{
+            fontWeight: "bold",
+            textAlign: "center",
+            mt: { xs: 4, md: 6 },
+            mb: { xs: 2, md: 3 },
+            fontSize: { xs: "1.6rem", sm: "2rem", md: "2.4rem" },
+          }}
         >
           Servicios principales
         </Typography>
         <Box
           sx={{
-            alignContent: "center",
-            ml: { xs: 15, md: 40 },
-            mr: { xs: 15, md: 40 },
+            mx: "auto",
+            maxWidth: { xs: "90%", sm: "80%", md: "60%" },
           }}
         >
           <Typography
             variant="subtitle1"
             sx={{
               textShadow: "2px 4px 4px rgba(0, 0, 0, 0.64)",
+              fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
             }}
           >
-            <ul>
+            <ul style={{ paddingLeft: "1.2rem" }}>
               <li>Consolidación y virtualización de servidores.</li>
               <li>Virtualizaciones de estaciones de trabajo.</li>
               <li>Backup & Recovery para ambientes virtuales y físicos.</li>
@@ -95,6 +125,7 @@ function Services() {
             </ul>
           </Typography>
         </Box>
+
         <ServicesList />
       </Box>
     </Box>
