@@ -16,22 +16,51 @@ function About() {
       name: "Rudolf Busch Oetjen",
       role: "Socio & Cofundador",
       image: "/src/assets/nosotros1.png",
-      details:
-        "Ingeniero especializado en infraestructura tecnológica y soluciones de almacenamiento empresarial. Con más de 15 años de experiencia en gestión de proyectos IT.",
+      details: [
+        "VMware Capacity Planner 2.7",
+        "VMware VSP 4, VTSP 4",
+        "VMware Technical Sales Professional",
+        "Infrastructure Virtualization",
+        "Business Continuity",
+        "Desktop Virtualization EMC",
+        "Acreditación de Ventas y System Engineer EMC",
+        "Technology Architect",
+        "Storage & Information Infrastructure - Commercial Specialist Version 5.0 (EMCTA)",
+        "Dell PS Series EqualLogic - Advanced Features, Operations and Administration (Dell Austin USA)",
+        "Dell PS Series EgualLogic - Business Continuity and Disaster Recovery (Dell Austin USA)",
+      ],
+      // "Ingeniero especializado en infraestructura tecnológica y soluciones de almacenamiento empresarial. Con más de 15 años de experiencia en gestión de proyectos IT.",
     },
     {
       name: "Marlo Paredes Arce",
       role: "Socio & Cofundador",
       image: "/src/assets/nosotros2.png",
-      details:
-        "Experto en virtualización de servidores y administración de entornos VMware. Ha liderado implementaciones de sistemas de alta disponibilidad.",
+      details: [
+        "EMCCIE Clariion Certified Implementation Engineer at EMC Computer Systems (Boston USA)",
+        "VMware Certified Professional VCP (Santiago, Chile)",
+        "Dell EqualLogic - Advanced Features, Operations and Administration (Dell Austin USA)",
+        "Dell EqualLogic - Business Continuity and Disaster Recovery (Dell Austin USA)",
+      ],
+      // "Experto en virtualización de servidores y administración de entornos VMware. Ha liderado implementaciones de sistemas de alta disponibilidad.",
     },
     {
       name: "Juan Cataldo Smith",
       role: "Socio & Cofundador",
       image: "/src/assets/nosotros3.png",
-      details:
-        "Profesional con amplia experiencia en soporte técnico y desarrollo de soluciones tecnológicas personalizadas para empresas del rubro industrial.",
+      details: [
+        "VMware Certified Professional vSphere 4, en VI3",
+        "VMware Certified Professional ESX Server & VirtualCenter 2",
+        "VMware Technical Sales Professional Desktop Solutions",
+        "Infrastructure Virtualization",
+        "VSLA Management - Workstation and Lab Manager",
+        "Enterprise Desktop",
+        "Testing and Development Environments",
+        "Server Consolidation and Containment",
+        "Business Continuity",
+        "Desktop Manageability & Security",
+        "EMC System Engineer Acreditation 2008",
+      ],
+      // "Profesional con amplia experiencia en soporte técnico y desarrollo de soluciones tecnológicas personalizadas para empresas del rubro industrial.",
     },
   ];
 
@@ -152,7 +181,6 @@ function About() {
         sx={{
           zIndex: 2,
           p: { xs: 2, sm: 3, md: 4 },
-          // pl: { xs: 2, sm: 4, md: 6 },
           mt: 6,
           mx: { xs: 2, sm: 4, md: 15 },
           borderRadius: { xs: 3, md: 5 },
@@ -237,9 +265,10 @@ function About() {
 
                 <CardContent>
                   <Typography
-                    variant="h6"
+                    variant="subtitle1"
                     sx={{
                       fontWeight: "bold",
+                      fontSize: "1.3rem",
                     }}
                   >
                     {member.name}
@@ -262,12 +291,39 @@ function About() {
                 >
                   <CardContent
                     sx={{
+                      pl: 3,
+                      pr: 4,
                       borderTop: "1px solid rgba(0,0,0,.1)",
                       backgroundColor: "rgba(255,255,255,0.6)",
                     }}
                   >
-                    <Typography variant="body2" color="text.secondary">
-                      {member.details}
+                    <Typography
+                    component="div"
+                      sx={{
+                        fontWeight: "bold",
+                        mt: 2,
+                        color: "darkslategrey",
+                        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.35)",
+                      }}
+                    >
+                      Acreditaciones y Certificados:
+                      <Typography component="div">
+                        <ul
+                          style={{
+                            marginTop: "8px",
+                            paddingLeft: "25px",
+                            color: "darkslategray",
+                          }}
+                        >
+                          {member.details.map((detail) => (
+                            <li>
+                              <Typography variant="body" color="textSecondary">
+                                {detail}
+                              </Typography>
+                            </li>
+                          ))}
+                        </ul>
+                      </Typography>
                     </Typography>
                   </CardContent>
                 </Collapse>
