@@ -13,6 +13,7 @@ import React, { useState } from "react";
 function About() {
   const teamMembers = [
     {
+      id: 1,
       name: "Rudolf Busch Oetjen",
       role: "Socio & Cofundador",
       image: "/src/assets/nosotros1.png",
@@ -29,9 +30,9 @@ function About() {
         "Dell PS Series EqualLogic - Advanced Features, Operations and Administration (Dell Austin USA)",
         "Dell PS Series EgualLogic - Business Continuity and Disaster Recovery (Dell Austin USA)",
       ],
-      // "Ingeniero especializado en infraestructura tecnológica y soluciones de almacenamiento empresarial. Con más de 15 años de experiencia en gestión de proyectos IT.",
     },
     {
+      id: 2,
       name: "Marlo Paredes Arce",
       role: "Socio & Cofundador",
       image: "/src/assets/nosotros2.png",
@@ -41,9 +42,9 @@ function About() {
         "Dell EqualLogic - Advanced Features, Operations and Administration (Dell Austin USA)",
         "Dell EqualLogic - Business Continuity and Disaster Recovery (Dell Austin USA)",
       ],
-      // "Experto en virtualización de servidores y administración de entornos VMware. Ha liderado implementaciones de sistemas de alta disponibilidad.",
     },
     {
+      id: 3,
       name: "Juan Cataldo Smith",
       role: "Socio & Cofundador",
       image: "/src/assets/nosotros3.png",
@@ -60,7 +61,6 @@ function About() {
         "Desktop Manageability & Security",
         "EMC System Engineer Acreditation 2008",
       ],
-      // "Profesional con amplia experiencia en soporte técnico y desarrollo de soluciones tecnológicas personalizadas para empresas del rubro industrial.",
     },
   ];
 
@@ -233,7 +233,7 @@ function About() {
         <Grid container spacing={3} justifyContent="center">
           {teamMembers.map((member, index) => (
             <Grid
-              key={index}
+              key={member.id}
               size={{ xs: 12, sm: 6, md: 4 }}
               justifyContent="center"
             >
@@ -318,8 +318,10 @@ function About() {
                             color: "darkslategray",
                           }}
                         >
-                          {member.details.map((detail) => (
-                            <li>
+                          {member.details.map((detail, index) => (
+                            <li 
+                            key={`${member.id}-${index}`}
+                            >
                               <Typography variant="body" color="textSecondary">
                                 {detail}
                               </Typography>
