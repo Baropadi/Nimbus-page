@@ -41,7 +41,7 @@ export default function ServicesList() {
       }}
     >
       {itemData.map((item) => (
-        <React.Fragment key={item.img}>
+        <React.Fragment key={item.id}>
           <Grid>
             <ImageListItem
               sx={{
@@ -127,9 +127,9 @@ export default function ServicesList() {
                     flexDirection: { xs: "column", md: "row" },
                     alignItems: "center",
                     backgroundColor: "rgba(240, 240, 240, 0.63)",
-                    borderRadius: 5,
-                    p: 5,
-                    m: 2,
+                    borderRadius: { xs: 3, sm: 5, md: 6 },
+                    p: { xs: 2.5, sm: 5, md: 6 },
+                    m: { xs: 0, sm: 3, md: 5 },
                     boxShadow: "0px 4px 20px rgba(0,0,0,0.2)",
                   }}
                 >
@@ -160,7 +160,8 @@ export default function ServicesList() {
                       sx={{
                         fontWeight: "bold",
                         mt: 2,
-                        color: "darkslategrey",
+                        color: "rgba(243, 249, 234, 1)",
+                        // color: "darkslategrey",
                         textShadow: "1px 1px 3px rgba(0, 0, 0, 0.35)",
                       }}
                     >
@@ -173,8 +174,8 @@ export default function ServicesList() {
                         color: "darkslategray",
                       }}
                     >
-                      {item.details.map((detail) => (
-                        <li>
+                      {item.details.map((detail, index) => (
+                        <li key={index}>
                           <Typography variant="subtitle1" color="textSecondary">
                             {detail}
                           </Typography>
@@ -205,6 +206,7 @@ export default function ServicesList() {
 
 const itemData = [
   {
+    id: 1,
     img: servicio1,
     title: "Sistema de almacenamiento Clariion",
     description: "Línea de CX200-700, CX3-20-80 (FC e iSCI), CX4-120-960.",
@@ -214,13 +216,14 @@ const itemData = [
       "Definición de Tipos de arreglos.",
       "Creación de contenedores.",
       "Registros de HBA, servidores.",
-      "Asignación de LUN's y Host.",
+      "Asignación de LUNs y Host.",
       "Creación de metaluns, tipos.",
-      "Creación, asignación y visualización de las LUN's en ambiente de operación.",
+      "Creación, asignación y visualización de las LUNs en ambiente de operación.",
       "Configuraciones de réplicas locales (SnapView) y remotas (MirrorView).",
     ],
   },
   {
+    id: 2,
     img: servicio2,
     title: "Sistema de almac. DELL iSCSI MD3000i y EqualLogic",
     description: "Storage Area Network (SAN).",
@@ -230,11 +233,12 @@ const itemData = [
       "Definición del tipo de arreglo.",
       "Configuración de las puertas iSCSI.",
       "Conexión de servidores al storage.",
-      "Asignación de LUN's a un serevidor y sus tipos de accesos.",
+      "Asignación de LUNs a un serevidor y sus tipos de accesos.",
       "Reconfiguraciones.",
     ],
   },
   {
+    id: 3,
     img: servicio3,
     title: "Switches de Fibra y Ethernet",
     description: "Línea Brocade, Cisco.",
@@ -247,6 +251,7 @@ const itemData = [
     ],
   },
   {
+    id: 4,
     img: servicio4,
     title: "Switches iSCSI",
     description: "Línea Cisco, Powerconnect.",
@@ -256,14 +261,16 @@ const itemData = [
     ],
   },
   {
+    id: 5,
     img: servicio5,
-    title: "Controladores - Host Bus Adapter (HBA's)",
+    title: "Controladores - Host Bus Adapter (HBAs)",
     description: "Línea modelos Emulex, Qlogic, HP, Sun e IBM.",
     details: [
-      "Validación, instalación, configuración y registros de HBA's en storages.",
+      "Validación, instalación, configuración y registros de HBAs en storages.",
     ],
   },
   {
+    id: 6,
     img: servicio6,
     title: "Software EMC",
     description: "Powerpath vers. 3.x, 4.x y 5.x",
@@ -275,8 +282,9 @@ const itemData = [
     ],
   },
   {
+    id: 7,
     img: servicio7,
-    title: "Config. y asignación de discos (LUN's) en diversos SO",
+    title: "Config. y asignación de discos (LUNs) en diversos SO",
     description: "VMware, Linux, Solaris, Windows, AIX y HPUX.",
     details: [
       "Asignación de volúmenes.",
@@ -285,12 +293,13 @@ const itemData = [
     ],
   },
   {
+    id: 8,
     img: servicio8,
     title: "Implementación de réplicas en almac. EMC/DELL Clariion",
     description:
       "SnapView (local) y MirrorView (remota), AutoSnap Manager de EqualLogic.",
     details: [
-      "Creación de las LUN's privadas para réplicas.",
+      "Creación de las LUNs privadas para réplicas.",
       "Creación de sesiones de Snap para una LUN.",
       "Creación de Clone Groups.",
       "Operaciones con Clone (sincronizar, promover, fracturar y remover).",
@@ -298,6 +307,7 @@ const itemData = [
     ],
   },
   {
+    id: 9,
     img: servicio9,
     title: "Capacitaciones",
     description: "Sistemas de almacenamiento DELL/EMC y sistemas Clariion.",
@@ -308,16 +318,18 @@ const itemData = [
     ],
   },
   {
+    id: 10,
     img: servicio10,
     title: "Levantamiento en Implementaciones",
     description: "Config. con DELL/EMC Clariion y de Switches FC.",
     details: [
       "Tomas de muestras y análisis del comportamiento de un DEL/EMC Clariion.",
       "Tomas de muestras y análisis de Switches de fibra.",
-      "Análisis de rendimiento de LUN's, Raid Groups y Storages Processor.",
+      "Análisis de rendimiento de LUNs, Raid Groups y Storages Processor.",
     ],
   },
   {
+    id: 11,
     img: servicio11,
     title: "Servicios profesionales con VMware",
     description: "Ambientes virtuales con VMware.",
@@ -327,7 +339,7 @@ const itemData = [
       "Definición de un Data Storage en servidores ESX.",
       "Configuración de Storage FC, iSCSI y NFS en servidores ESX.",
       "Instalación y configuración de VMotion, HA y DRS.",
-      "Conversión de máquinas físicas a virtuales (Windows / Linux).",
+      "Conversión de máquinas físicas a virtuales (Windows/Linux).",
       "Backup y Restore mediante BCV y VMware Data Recovery.",
       "Operaciones con máquinas virtuales.",
       "Virtualización de servidores Microsoft y Linux.",

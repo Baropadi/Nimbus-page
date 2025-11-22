@@ -190,10 +190,13 @@ function About() {
           textAlign: { xs: "center", md: "left" },
         }}
       >
-        <Typography variant="h6">
-          Cuéntenos lo que necesita y podemos configurar su laptop, servidor
-          PowerEdge, estación de trabajo o sistema de almacenamiento inteligente
-          ad-hoc a las necesidades de su empresa.
+        <Typography variant="h6" sx={{ textAlign: "center", mb: 1 }}>
+          <strong>¡Cuéntanos lo que necesitas!</strong>
+        </Typography>
+        <Typography variant="h6" sx={{ textAlign: "center" }}>
+          Nosotros podemos configurar tu laptop, servidor PowerEdge, estación de
+          trabajo o sistema de almacenamiento inteligente ad-hoc a las
+          necesidades de tu empresa.
         </Typography>
       </Paper>
 
@@ -298,7 +301,7 @@ function About() {
                     }}
                   >
                     <Typography
-                    component="div"
+                      component="div"
                       sx={{
                         fontWeight: "bold",
                         mt: 2,

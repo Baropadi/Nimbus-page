@@ -10,15 +10,14 @@ function Services() {
         minHeight: "100vh",
         backgroundImage: "url('/src/assets/FondoServices1.png')",
         backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundAttachment: { xs: "scroll", md: "fixed" },
-        backgroundPosition: "center",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "center",
         color: "white",
-        px: { xs: 2, sm: 4, md: 6 },
-        pt: { xs: 10, md: 15 },
+        px: { xs: 2, sm: 4, md: 10 },
       }}
     >
       <Box className="box-gradient" />
@@ -26,7 +25,8 @@ function Services() {
       <Box
         className="box-title"
         sx={{
-          pl: { xs: 0, md: 3 },
+          mt: { xs: 12, md: 15 },
+          textAlign: { xs: "center", md: "left" },
         }}
       >
         <Typography
@@ -35,7 +35,6 @@ function Services() {
             fontWeight: "bold",
             fontSize: { xs: "1.8rem", sm: "2.3rem", md: "3rem" },
             textAlign: { xs: "center", md: "left" },
-            mb: { xs: 2, md: 3 },
           }}
         >
           Nuestros servicios
