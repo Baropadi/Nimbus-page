@@ -22,7 +22,6 @@ import servicio8 from "../assets/servicio8.png";
 import servicio9 from "../assets/servicio9.png";
 import servicio10 from "../assets/servicio10.png";
 import servicio11 from "../assets/servicio11.png";
-import { SportsRugbySharp } from "@mui/icons-material";
 
 export default function ServicesList() {
   const [selectedItem, setSelectedItem] = React.useState(null);

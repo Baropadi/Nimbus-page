@@ -8,6 +8,10 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
+import fondoAbout from "../assets/FondoAbout1.png";
+import nosotros1 from "../assets/nosotros1.png";
+import nosotros2 from "../assets/nosotros2.png";
+import nosotros3 from "../assets/nosotros3.png";
 import React, { useState } from "react";
 
 function About() {
@@ -16,7 +20,7 @@ function About() {
       id: 1,
       name: "Rudolf Busch Oetjen",
       role: "Socio & Cofundador",
-      image: "/src/assets/nosotros1.png",
+      image: nosotros1,
       details: [
         "VMware Capacity Planner 2.7",
         "VMware VSP 4, VTSP 4",
@@ -35,7 +39,7 @@ function About() {
       id: 2,
       name: "Marlo Paredes Arce",
       role: "Socio & Cofundador",
-      image: "/src/assets/nosotros2.png",
+      image: nosotros2,
       details: [
         "EMCCIE Clariion Certified Implementation Engineer at EMC Computer Systems (Boston USA)",
         "VMware Certified Professional VCP (Santiago, Chile)",
@@ -47,7 +51,7 @@ function About() {
       id: 3,
       name: "Juan Cataldo Smith",
       role: "Socio & Cofundador",
-      image: "/src/assets/nosotros3.png",
+      image: nosotros3,
       details: [
         "VMware Certified Professional vSphere 4, en VI3",
         "VMware Certified Professional ESX Server & VirtualCenter 2",
@@ -75,7 +79,7 @@ function About() {
       sx={{
         position: "relative",
         minHeight: "100vh",
-        backgroundImage: "url('/src/assets/FondoAbout1.png')",
+        backgroundImage: `url(${fondoAbout})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

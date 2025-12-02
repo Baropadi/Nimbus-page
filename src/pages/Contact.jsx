@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import fondoContact from "../assets/FondoContact1.png";
 import React from "react";
 
 function Contact() {
@@ -15,7 +16,7 @@ function Contact() {
       sx={{
         position: "relative",
         minHeight: "100vh",
-        backgroundImage: "url('/src/assets/FondoContact1.png')",
+        backgroundImage: `url(${fondoContact})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

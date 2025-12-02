@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import fondoHome from "../assets/FondoHome1.png";
 import React from "react";
 
 function Home() {
@@ -7,7 +8,7 @@ function Home() {
       sx={{
         position: "relative",
         minHeight: "100vh",
-        backgroundImage: "url('/src/assets/FondoHome1.png')",
+        backgroundImage: `url(${fondoHome})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

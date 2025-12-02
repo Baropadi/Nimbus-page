@@ -1,4 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
+import fondoServices from "../assets/FondoServices1.png";
 import React from "react";
 import ServicesList from "../components/ServicesList";
 
@@ -8,7 +9,7 @@ function Services() {
       sx={{
         position: "relative",
         minHeight: "100vh",
-        backgroundImage: "url('/src/assets/FondoServices1.png')",
+        backgroundImage: `url(${fondoServices})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
