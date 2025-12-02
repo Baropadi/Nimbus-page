@@ -161,7 +161,6 @@ export default function ServicesList() {
                         fontWeight: "bold",
                         mt: 2,
                         color: "rgba(243, 249, 234, 1)",
-                        // color: "darkslategrey",
                         textShadow: "1px 1px 3px rgba(0, 0, 0, 0.35)",
                       }}
                     >

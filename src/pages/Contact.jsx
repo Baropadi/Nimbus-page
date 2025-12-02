@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 
 function Contact() {
   const handleScrollToForm = (e) => {
@@ -30,6 +29,7 @@ function Contact() {
     >
       <Box className="box-gradient" />
 
+      {/* Título de la sección */}
       <Box
         className="box-title"
         sx={{
@@ -48,6 +48,7 @@ function Contact() {
         </Typography>
       </Box>
 
+      {/* Texto Principal */}
       <Box
         className="box-text"
         sx={{

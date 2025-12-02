@@ -6,7 +6,6 @@ function Home() {
     <Box
       sx={{
         position: "relative",
-        // height: { xs: "auto", md: "100vh" },
         minHeight: "100vh",
         backgroundImage: "url('/src/assets/FondoHome1.png')",
         backgroundSize: "cover",
@@ -18,12 +17,12 @@ function Home() {
         justifyContent: "center",
         color: "white",
         px: { xs: 2, sm: 4, md: 10 },
-        // padding: { xs: "2rem 1rem", md: 0 },
         textAlign: { xs: "center", md: "left" },
       }}
     >
       <Box className="box-gradient" />
 
+      {/* Título de la sección */}
       <Box
         className="box-title"
         sx={{
@@ -41,6 +40,7 @@ function Home() {
         </Typography>
       </Box>
 
+      {/* Texto Principal */}
       <Box
         className="box-text"
         sx={{
