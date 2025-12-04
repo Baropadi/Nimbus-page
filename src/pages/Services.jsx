@@ -1,5 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
-import fondoServices from "../assets/FondoServices1.png";
+import fondoServices from "../assets/FondoServices1.webp";
 import React from "react";
 import ServicesList from "../components/ServicesList";
 

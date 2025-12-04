@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import fondoContact from "../assets/FondoContact1.png";
+import fondoContact from "../assets/FondoContact1.webp";
 import React from "react";
 
 function Contact() {
