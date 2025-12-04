@@ -9,9 +9,9 @@ import {
   Typography,
 } from "@mui/material";
 import fondoAbout from "../assets/FondoAbout1.png";
-import nosotros1 from "../assets/nosotros1.png";
-import nosotros2 from "../assets/nosotros2.png";
-import nosotros3 from "../assets/nosotros3.png";
+import nosotros1 from "../assets/nosotros1.webp";
+import nosotros2 from "../assets/nosotros2.webp";
+import nosotros3 from "../assets/nosotros3.webp";
 import React, { useState } from "react";
 
 function About() {
