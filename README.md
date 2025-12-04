@@ -37,7 +37,7 @@ src/
 
 - Navbar: Navegación fija superior con menú y logo.
 - Footer: Información de contacto, mapa y enlaces inferiores.
-- Layout: Componente envoltorio para estructura general del sitio.
+- Layout: Componente envoltorio de la estructura general del sitio.
 - ScrollToTop: Control automático del scroll en cambios de ruta.
 - ServicesList: Renderizado de los servicios ofrecidos por la empresa.
 
@@ -96,7 +96,7 @@ Se emplea una paleta basada en el logo oficial de la empresa.
 ___________________________________________________________
 -> Contacto
 
-Este proyecto incluye una sección para que usuarios puedan contactar directamente a la empresa desde el sitio web.
+Este proyecto incluye una sección para que los usuarios puedan contactar directamente a la empresa desde el sitio web.
 ___________________________________________________________
 -> Estado del Proyecto
 
