@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import fondoHome from "../assets/FondoHome1.png";
+import fondoHome from "../assets/FondoHome1.webp";
 import React from "react";
 
 function Home() {
