@@ -89,7 +89,7 @@ export default function Footer() {
                 className="contact-link"
                 variant="body2"
                 component="a"
-                href="https://www.nouschile.cl/tecnologia-de-punta/datacenter-infraestructura/equipos-dell/?gad_source=1&gad_campaignid=22611294446&gclid=CjwKCAjwgeLHBhBuEiwAL5gNETyyNCANnoq5KteRrEJhY9LTUqAF3EGOwl6ClUJiKxl7PYwySbN25BoCdRYQAvD_BwE"
+                href="https://www.dell.com/es-cl/lp"
                 target="_blank"
                 sx={{
                   textDecoration: "none",
